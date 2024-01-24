@@ -1,0 +1,17 @@
+{
+  "name": "backend-todo",
+  "version": "1.0.0",
+  "description": "ToDo app made by Rohit Pal",
+  "main": "index.js",
+  "scripts": {
+    "build": "node api/index.js"
+  },
+  "author": "Rohit",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3",
+    "pg": "^8.11.3"
+  }
+}

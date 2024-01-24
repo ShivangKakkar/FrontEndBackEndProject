@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body{
+  background-color: rgb(5, 5, 5);
+} */
+
+.layers {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    z-index: 2;
+    transition: var(--transition);
+  }
+  
+  .layers__base {
+    transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+    z-index: 0;
+  }
+  
+  .layers__middle {
+    transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+  }
+  
+  .layers__front {
+    transform: translate3d(0, calc(var(--scrollTop) / 5.7), 0);
+  }
+  
+/* Add these styles for the toggle button */
+.toggle-button {
+  padding: 0;
+  font-size: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: scale(0.75);
+  background-color: transparent;
+  transition: all 200ms ease-in;
+  border: none; /* Use 'none' instead of '0' for consistency */
+  color: #fff; /* Specify a text color for better visibility */
+
+  /* Optional: Add a focus outline for better accessibility */
+  outline: none;
+}
+
+/* Optional: Style the button differently on hover */
+.toggle-button:hover {
+  background-color: rgb(5, 5, 5);
+}
+
+
+/* Styles for light mode */
+.light {
+  /* background-color: #fff; */
+  color: #000;
+}
+
+/* Styles for dark mode */
+.dark {
+  background-color: rgb(5, 5, 5);
+  color: rgb(26, 210, 149); /* Adjust the text color to a lighter shade */
+}
+
+.top-bar{
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    
+}
+
